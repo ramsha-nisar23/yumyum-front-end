@@ -1,0 +1,195 @@
+.menu-management {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex: 1;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .add-item-button {
+      background-color: #C94C02;
+      border: none;
+      padding: 10px 20px;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: #b84301;
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .empty-state {
+      text-align: center;
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+
+      p {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+
+      small {
+        display: block;
+        margin-top: 5px;
+        color: #777;
+      }
+    }
+
+    .menu-list {
+      width: 100%;
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        .menu-item {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+          }
+
+          p {
+            margin: 0;
+            font-size: 14px;
+            color: #777;
+          }
+
+          span {
+            font-size: 16px;
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+
+  .popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popup-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 400px;
+      position: relative;
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 24px;
+        color: #ccc;
+
+        &:hover {
+          color: #333;
+        }
+      }
+
+      .menu-popup-form {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+          font-size: 24px;
+          margin-bottom: 20px;
+          color: #333;
+        }
+
+        .form-row {
+          display: flex;
+          flex-direction: column;
+
+          .form-label {
+            margin-bottom: 10px;
+
+            .required-field {
+              color: red;
+              margin-left: 5px;
+            }
+
+            input,
+            textarea {
+              width: 100%;
+              padding: 8px;
+              margin-top: 5px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            }
+
+            textarea {
+              height: 80px;
+              resize: none;
+            }
+
+            .error-message {
+              color: red;
+              font-size: 12px;
+              margin-top: 5px;
+            }
+          }
+        }
+
+        .popup-btn-section {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 20px;
+
+          button {
+            background-color: #C94C02;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+
+            &:hover {
+              background-color: #b84301;
+            }
+          }
+
+          .another-popup {
+            background-color: #007bff;
+          }
+        }
+      }
+    }
+  }
+}
